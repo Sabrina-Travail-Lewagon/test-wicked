@@ -1,0 +1,7 @@
+<h2>Thanks for signing up </h2>
+<%= form_for(@user, :url => wizard_path, :method => :put) do |f| %>
+  <%= f.text_field  :first_name, :placeholder => 'Prénom' %>
+  <%= f.text_field  :last_name, :placeholder => 'Nom' %>
+  <%= f.text_field :a_propos, :placeholder => 'A propos de vous' %>
+  <%= f.submit 'Suivant', :class => 'btn btn-primary' %>
+<% end %>
