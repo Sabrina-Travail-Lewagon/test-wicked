@@ -1,6 +1,8 @@
-<%= simple_form_for(@user, url: wizard_path, method: :put) do |f| %>
-  <%= f.input :location, placeholder: 'lieu' %>
-   <%= f.input :country, as: :select, collection: country_options_for_select, include_blank: 'Pays', label: 'Pays' %>
-  <%= f.input :photos, as: :text, placeholder: 'photos' %>
-  <%= f.button :submit, 'Valider', class: 'btn btn-primary' %>
-<% end %>
+<div class="form-inputs" data-controller="maps-autocomplete">
+  <%= simple_form_for(@user, url: wizard_path, method: :put) do |f| %>
+    <%= f.input :location, placeholder: 'lieu', input_html: { data: { maps_autocomplete_target: 'country' } } %>
+    <%= f.input :address, input_html: {data: { maps_autocomplete_target: "address"  } } %>
+    <%= f.input :photos, as: :text, placeholder: 'photos' %>
+    <%= f.button :submit, 'Valider', class: 'btn btn-primary' %>
+  <% end %>
+</div>
