@@ -1,8 +1,5 @@
 Geocoder.configure(
   # Geocoding options
-  lookup: :google,
-  api_key: ENV['GOOGLE_API_SERVER_KEY'],
-  use_https: true
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :nominatim,         # name of geocoding service (symbol)
   # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)
@@ -19,7 +16,7 @@ Geocoder.configure(
   # always_raise: [],
 
   # Calculation options
-  # units: :mi,                 # :km for kilometers or :mi for miles
+  units: :km, # :km for kilometers or :mi for miles
   # distances: :linear          # :spherical or :linear
 
   # Cache configuration

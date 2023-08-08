@@ -4,3 +4,9 @@
   right: 16px;
   z-index: 1000;
 }
+
+
+.invalid-address {
+  border: 1px solid red; /* Ajoute une bordure rouge pour indiquer l'erreur */
+  background-color: rgba(255, 0, 0, 0.1); /* Ajoute un fond rouge transparent */
+}

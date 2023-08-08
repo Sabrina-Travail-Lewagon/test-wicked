@@ -28,6 +28,6 @@ class AfterRegisterController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :location, :country, :address, :a_propos, photo: [])
+    params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :location, :country, :address, :a_propos, photos: [])
   end
 end
