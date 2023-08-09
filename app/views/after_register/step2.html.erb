@@ -2,7 +2,7 @@
   <%= simple_form_for(@user, url: wizard_path, method: :put) do |f| %>
     <%= f.input :address, input_html: {data: { maps_autocomplete_target: "address"  } } %>
     <%= f.input :country, input_html: { data: { maps_autocomplete_target: "country" } } %>
-    <%= f.input :location, input_html: { data: { maps_autocomplete_target: "region" } } %>
+    <%= f.input :city, input_html: { data: { maps_autocomplete_target: "region" } } %>
     <%= f.input :photos, as: :text, placeholder: 'photos' %>
     <%= f.button :submit, 'Valider', class: 'btn btn-primary' %>
   <% end %>
